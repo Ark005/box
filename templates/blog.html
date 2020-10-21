@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+<div class="row row-cols-1 row-cols-md-2">
+  {% for post in posts %}
+    <div class="col mb-4">
+      <div class="card">
+        <div class="view overlay">
+          <img class="card-img-left"
+          
+          {% if post.image %}
+          <img src="{{post.image.url}}"
+      {% endif %}alt="">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">{{post.title}}</h4>
+          <p class="card-text">{{post.description}}</p>
+        
+          <div id="browse_app">
+         
+            <a class="btn btn-large btn-info" href="{% url 'detail' post.id %}">расчитать</a>
+          </div
+                </script>
+            </body>
+        </html>
+
+
+      
+
+
+        
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
